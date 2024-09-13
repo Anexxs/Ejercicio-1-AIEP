@@ -1,0 +1,57 @@
+package robot;
+
+public class Robot1_HE {
+    private Cabeza_HE cabeza;
+    private Manorobot_HE mano;
+    private Pierna_HE pierna;
+    private Torso_HE torso;
+
+    // Constructor que inicializa todos los componentes del robot
+    public Robot1_HE(Cabeza_HE cabeza, Manorobot_HE mano, Pierna_HE pierna, Torso_HE torso) {
+        this.cabeza = cabeza;
+        this.mano = mano;
+        this.pierna = pierna;
+        this.torso = torso;
+    }
+
+    // Métodos getter para cada componente
+    public Cabeza_HE getCabeza_HE() {
+        return cabeza;
+    }
+
+    public Manorobot_HE getMano_HE() {
+        return mano;
+    }
+
+    public Pierna_HE getPierna_HE() {
+        return pierna;
+    }
+
+    public Torso_HE getTorso_HE() {
+        return torso;
+    }
+
+    // Método para describir el robot completo
+    public void describirRobot() {
+        System.out.println("Descripción del Robot:");
+        cabeza.describirCabeza();
+        mano.describirMano();
+        pierna.describirPierna();
+        torso.describirTorso();
+    }
+
+    // Método main para ejecutar la aplicación
+    public static void main(String[] args) {
+        // Crear los componentes del robot
+        Cabeza_HE cabezaRobot = new Cabeza_HE("abiertos", "cerrada", "metálicas");
+        Manorobot_HE manoRobot = new Manorobot_HE(5, "extendida");
+        Pierna_HE piernaRobot = new Pierna_HE("derecha", "flexionada", "suelda", 5);
+        Torso_HE torsoRobot = new Torso_HE("delgado", "acero");
+
+        // Crear el robot con los componentes
+        Robot1_HE robot = new Robot1_HE(cabezaRobot, manoRobot, piernaRobot, torsoRobot);
+
+        // Describir el robot completo
+        robot.describirRobot();
+    }
+}

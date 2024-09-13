@@ -1,0 +1,38 @@
+package robot;
+
+public class Robot1_HE {
+    private Cabeza_HE cabeza;
+    private Manorobot_HE mano;
+    private Pierna_HE pierna;
+    private Torso_HE torso;
+
+    public Robot1_HE(Cabeza_HE cabeza, Manorobot_HE mano, Pierna_HE pierna, Torso_HE torso) {
+        this.cabeza = cabeza;
+        this.mano = mano;
+        this.pierna = pierna;
+        this.torso = torso;
+    }
+    public Cabeza_HE getCabeza_HE() {
+        return cabeza;
+    }
+
+    public Manorobot_HE getMano_HE() {
+        return mano;
+    }
+
+    public Pierna_HE getPierna_HE() {
+        return pierna;
+    }
+
+    public Torso_HE getTorso_HE() {
+        return torso;
+    }
+
+    public void describirRobot() {
+        System.out.println("Descripción del Robot:");
+        cabeza.describirCabeza();
+        mano.describirMano();
+        pierna.describirPierna();
+        torso.describirTorso();
+    }
+}

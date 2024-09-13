@@ -1,0 +1,50 @@
+package robot;
+
+public class Robot1_HE {
+    private Cabeza_HE cabeza_HE;
+    private Manorobot_HE mano_HE;
+    private Pierna_HE pierna_HE;
+    private Torso_HE torso_HE;
+
+    public Robot1_HE(Cabeza_HE cabeza, Manorobot_HE mano, Pierna_HE pierna, Torso_HE torso) {
+        this.cabeza_HE = cabeza;
+        this.mano_HE = mano;
+        this.pierna_HE = pierna;
+        this.torso_HE = torso;
+    }
+
+    public Cabeza_HE getCabeza_HE() {
+        return cabeza_HE;
+    }
+
+    public Manorobot_HE getMano_HE() {
+        return mano_HE;
+    }
+
+    public Pierna_HE getPierna_HE() {
+        return pierna_HE;
+    }
+
+    public Torso_HE getTorso_HE() {
+        return torso_HE;
+    }
+
+    public void describirRobot() {
+        System.out.println("Descripción del Robot:");
+        cabeza_HE.describirCabeza();
+        mano_HE.describirMano();
+        pierna_HE.describirPierna();
+        torso_HE.describirTorso();
+    }
+
+    public static void main(String[] args) {
+        Cabeza_HE cabezaRobot = new Cabeza_HE("abiertos", "cerrada", "metálicas");
+        Manorobot_HE manoRobot = new Manorobot_HE(5, "extendida");
+        Pierna_HE piernaRobot = new Pierna_HE("derecha", "flexionada", "suelda", 5);
+        Torso_HE torsoRobot = new Torso_HE("delgado", "acero");
+
+        Robot1_HE robot = new Robot1_HE(cabezaRobot, manoRobot, piernaRobot, torsoRobot);
+
+        robot.describirRobot();
+    }
+}
